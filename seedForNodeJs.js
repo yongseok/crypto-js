@@ -2910,6 +2910,16 @@ function test_seed_ecb() {
 }
 
 function test_seed_cbc() {
+    /*
+    http://t.dgl.kr/seed/%5b02%5d%20CBC/index.php
+    키(KEY): 6c,6c,6e,6f,74,65,54,65,73,74,21,40,23,31,32,33
+    - "llnoteTest!@#123"
+    초기값(IV): 6c,6c,6e,6f,74,65,54,65,73,74,21,40,23,31,32,33
+    - "llnoteTest!@#123"
+    평문: ec,95,88,eb,85,95,ed,95,98,ec,84,b8,ec,9a,94
+    - "안녕하세요"
+    암호문: 22,A4,BF,A0,61,B7,9D,92,A4,36,79,20,90,D4,7D,2F
+     */
     var plainText = "안녕하세요";
     var plainValue = CryptoJS.enc.Utf8.parse(plainText); // 평문
 
